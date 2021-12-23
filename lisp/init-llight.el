@@ -1,7 +1,4 @@
-(use-package valign
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook #'valign-mode))
+;; 个人临时配置
 
 
 (provide 'init-llight)

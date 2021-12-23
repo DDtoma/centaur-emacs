@@ -331,7 +331,16 @@ prepended to the element after the #+HEADER: tag."
           org-roam-v2-ack t)
     :config
     (unless (file-exists-p org-roam-directory)
-      (make-directory org-roam-directory))))
+      (make-directory org-roam-directory))
+    ;; 在org mode里windows系统插入时间中文会乱码，使用英文的时间
+    (setq system-time-locale "C")
+    (format-time-string "%Y-%m-%d %a")
+
+    (use-package valign
+      :ensure t
+      :config
+      (add-hook 'org-mode-hook #'valign-mode))
+    ))
 
 (use-package vulpea
   :ensure t
