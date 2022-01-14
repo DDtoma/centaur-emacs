@@ -1,5 +1,6 @@
 ;; 个人临时配置
 (use-package rime
+  :defer nil
   ;; emacs-rime configration https://github.com/DogLooksGood/emacs-rime
   :ensure t
   :custom (default-input-method "rime")
@@ -36,7 +37,7 @@
     (define-key rime-mode-map (kbd "M-j") 'rime-force-enable))
   ;; 光标字符
   (setq rime-cursor "|")
-  (global-set-key (kbd "C-SPC") 'toggle-input-method)
+  ;; (global-set-key (kbd "C-SPC") 'toggle-input-method)
   )
 
 (use-package yaml-mode
@@ -62,6 +63,7 @@
      ;; SPC + 单键绑定部分常用的功能
      '("s" . swiper)
      '("f" . counsel-find-file)
+     '("r" . counsel-recentf)
      '("t" . youdao-dictionary-search-at-point+)
      '("b" . ivy-switch-buffer)
      '("p" . project-find-file)
@@ -151,7 +153,11 @@
                                        (keypad . "K")
                                        (insert . "I")
                                        (beacon . "B")))
+  (meow-setup-line-number)
   (delete-selection-mode -1)
   )
+
+(with-eval-after-load 'lsp-rust
+  (require 'dap-gdb-lldb))
 
 (provide 'init-llight)

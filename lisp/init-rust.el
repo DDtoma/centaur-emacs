@@ -34,7 +34,10 @@
 (require 'init-const)
 
 (when emacs/>=26p
-  (use-package rustic))
+  (use-package rustic
+    :config
+    (setq lsp-rust-server 'rust-analyzer)
+    ))
 
 (use-package rust-playground)
 

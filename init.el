@@ -133,16 +133,16 @@
 
 ;; Programming
 (require 'init-vcs)
-;; (require 'init-flycheck)
+(require 'init-flycheck)
 (require 'init-projectile)
-;; (require 'init-lsp)
+(require 'init-lsp)
 ;; (require 'init-ctags)
 
 (require 'init-prog)
 (require 'init-elisp)
-;; (require 'init-c)
+(require 'init-c)
 ;; (require 'init-go)
-;; (require 'init-rust)
+(require 'init-rust)
 ;; (require 'init-python)
 ;; (require 'init-ruby)
 ;; (require 'init-dart)
