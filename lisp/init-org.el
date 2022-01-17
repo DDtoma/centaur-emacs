@@ -179,6 +179,8 @@ prepended to the element after the #+HEADER: tag."
                   (and (eq buf (current-buffer)) (quit-window))
                   (pop-to-buffer buf)))))
           org-file-apps))
+  (when (featurep 'xwidget-internal)
+    (setq org-roam-ui-browser-function #'xwidget-webkit-browse-url))
 
   ;; Add gfm/md backends
   (use-package ox-gfm)
