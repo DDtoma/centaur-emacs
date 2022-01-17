@@ -28,7 +28,7 @@
 ;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
-;; published by the Free Software Foundation; either version 2, or
+;; published by the Free Software Foundation; either version 3, or
 ;; (at your option) any later version.
 ;;
 ;; This program is distributed in the hope that it will be useful,
@@ -125,10 +125,10 @@
 
 (require 'init-markdown)
 (require 'init-org)
-(require 'init-reader)
+;; (require 'init-reader)
 
 (require 'init-dict)
-(require 'init-docker)
+;; (require 'init-docker)
 (require 'init-utils)
 
 ;; Programming
@@ -136,18 +136,20 @@
 (require 'init-flycheck)
 (require 'init-projectile)
 (require 'init-lsp)
-(require 'init-ctags)
+;; (require 'init-ctags)
 
 (require 'init-prog)
 (require 'init-elisp)
 (require 'init-c)
-(require 'init-go)
+;; (require 'init-go)
 (require 'init-rust)
-(require 'init-python)
-(require 'init-ruby)
-(require 'init-dart)
-(require 'init-elixir)
-(require 'init-web)
+;; (require 'init-python)
+;; (require 'init-ruby)
+;; (require 'init-dart)
+;; (require 'init-elixir)
+;; (require 'init-web)
+
+(require 'init-llight)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init.el ends here
